@@ -23,12 +23,15 @@
           <img src="" alt="" />
           <span>S<i class="fa-regular fa-sun"></i>ren</span>
         </div>
-        <div class="nav-links">
-          <a href="#"><i class="fa-solid fa-house"></i>Home</a>
-          <a href="#"><i class="fa-solid fa-bell-concierge"></i>Services</a>
-          <a href="#"><i class="fa-solid fa-briefcase"></i>Internship</a>
-          <a href="#"><i class="fa-solid fa-dolly"></i>Products</a>
-          <a href="#"><i class="fa-solid fa-phone"></i>Contacts</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+          <a href="#"><i class="fa-solid fa-bell-concierge"></i> Services</a>
+          <a href="#"><i class="fa-solid fa-briefcase"></i> Internship</a>
+          <a href="#"><i class="fa-solid fa-dolly"></i> Products</a>
+          <a href="#"><i class="fa-solid fa-phone"></i> Contacts</a>
         </div>
       </nav>
     </header>
@@ -168,5 +171,20 @@
         </div>
       </div>
     </footer>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        hamburger.classList.toggle('active');
+      });
+      // Close nav when a link is clicked
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          hamburger.classList.remove('active');
+        });
+      });
+    </script>
   </body>
 </html>
