@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
+}
+/* The navbar */
+header {
+  position: fixed;
+  width: 100%;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* The logo` */
+.brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+.brand span {
+  display: flex;
+  font-size: 20px;
+  /* gap: 30px; */
+}
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+}
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+  transition: color 0.5s ease-in-out, text-decoration 0.5s ease-in-out;
+}
+.nav-links a:hover {
+  color: green;
+  text-decoration: underline;
+}
+/* Section */
+
+.img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.overlay h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.overlay p {
+  font-size: 20px;
+}
+/* First Section */
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 100px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.info1 {
+  width: 100%;
+}
+.info1 h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #111;
+}
+.info1 p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.info2 {
+  margin-left: 50px;
+  width: 50%;
+}
+.info2 .img2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Second section */
+.info3 {
+  text-align: center;
+  padding: 40px 100px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.info3 h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #111;
+}
+.card-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+}
+.card i {
+  font-size: 40px;
+  color: #155;
+  margin-bottom: 15px;
+}
+.card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #111;
+}
+.card p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* The footer */
+footer .container {
+  background-color: #155;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px;
+}
+.footer-col ul {
+  list-style: none;
+}
+.footer-col h4 {
+  color: whitesmoke;
+  margin-bottom: 25px;
+  font-size: 22px;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  width: 70px;
+  height: 2px;
+  position: absolute;
+  background-color: white;
+  bottom: -10px;
+}
+.footer-col ul li {
+  padding: 10px 0;
+}
+.footer-col ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.footer-col ul li a:hover {
+  opacity: 1;
+}
+.footer-col input {
+  border: none;
+  width: 250px;
+  height: 45px;
+  display: block;
+  padding-left: 20px;
+  margin: 14px 0;
+}
+.footer-col .inputSubmit {
+  padding: 0px 20px;
+  color: whitesmoke;
+  background-color: rgba(28, 207, 96, 0.1);
+  border: none;
+  border: 1px solid white;
+}
+.col p {
+  color: white;
+}
+.row hr {
+  opacity: 0.7;
+}
+.row .socialicons i {
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  margin: 0 15px;
+  transition: 0.5s;
+}
+.row .socialicons i:hover {
+  color: aquamarine;
+  border: 0.5px solid whitesmoke;
+}
+@media (max-width: 600px) {
+  footer .row {
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+  footer .footer-col ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .footer-col input {
+    width: 100%;
+  }
+}
